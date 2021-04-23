@@ -1,0 +1,25 @@
+{
+  "name": "user-login-template",
+  "version": "1.0.0",
+  "description": "Just a template made using Mongoose, Apollo, and GraphQL with basic user login, validation and JWT Authentication functionality",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jscottrumptz/user-login-template.git"
+  },
+  "author": "J. Scott Rumptz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jscottrumptz/user-login-template/issues"
+  },
+  "homepage": "https://github.com/jscottrumptz/user-login-template#readme",
+  "dependencies": {
+    "if-env": "^1.0.4"
+  },
+  "devDependencies": {
+    "concurrently": "^6.0.2"
+  }
+}
