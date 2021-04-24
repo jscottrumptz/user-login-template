@@ -7,7 +7,7 @@ const { AuthenticationError } = require('apollo-server-express');
 // import the token function from utils
 const { signToken } = require('../utils/auth');
 
-// just a simple object called resolvers with a Query nested object that holds a series of methods. These methods get
+// just a simple object called resolvers with a Query and Mutation nested object that holds a series of methods. These methods get
 // the same name of the query or mutation they are resolvers for. We don't have to worry about error handling here
 // because Apollo can infer if something goes wrong and will respond for us.
 const resolvers = {

@@ -4,7 +4,11 @@
   "description": "Just a template made using Mongoose, Apollo, and GraphQL with basic user login, validation and JWT Authentication functionality",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "cd server && npm start",
+    "start:dev": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "heroku-postbuild": "cd client && npm run build"
   },
   "repository": {
     "type": "git",

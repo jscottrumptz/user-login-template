@@ -9,6 +9,7 @@ const { authMiddleware } = require('./utils/auth');
 // import typeDefs and resolvers
 const { typeDefs, resolvers } = require('./schemas');
 
+// import the database connection
 const db = require('./config/connection');
 
 const PORT = process.env.PORT || 3001;
@@ -39,6 +40,7 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 
+// upon a successful connection, we start the server.
 db.once('open', () => {
     app.listen(PORT, () => {
         console.log(`API server running on port ${PORT}!`);
